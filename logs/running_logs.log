@@ -8,3 +8,495 @@ INFO Logger is set up successfully.
 INFO Logger is set up successfully.
 INFO Logger is set up successfully.
 INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Box error while reading YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: First argument must be mapping or iterable
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 19, in __init__
+    self.params = read_yaml(params_filepath)
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\Projects\Text-Summarization\src\utils\functions.py", line 29, in read_yaml
+    raise e
+  File "D:\Projects\Text-Summarization\src\utils\functions.py", line 25, in read_yaml
+    return ConfigBox(content)
+  File "box\\box.py", line 295, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: First argument must be mapping or iterable
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Error creating artifacts: 'str' object has no attribute 'exists'
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 21, in __init__
+    create_directories([self.config.artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Error creating artifacts: 'str' object has no attribute 'exists'
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 22, in __init__
+    create_directories([self.config.artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 25, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Created directory: artifacts
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 22, in __init__
+    create_directories([Path(self.config.artifacts_root)])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 25, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root], verbose=True)
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: Argument path_to_directories of type <class 'list'> to <function create_directories at 0x0000027A075E83A0> does not match annotation type <class 'pathlib.Path'>
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 870, in __call__
+    raise EnsureError(msg.format(arg=arg, f=self.f, t=templ, valt=type(value)))
+ensure.main.EnsureError: Argument path_to_directories of type <class 'list'> to <function create_directories at 0x0000027A075E83A0> does not match annotation type <class 'pathlib.Path'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: Argument path_to_directories of type <class 'list'> to <function create_directories at 0x0000027A075E83A0> does not match annotation type <class 'pathlib.Path'>
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: 'WindowsPath' object is not iterable
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories(artifacts_root)
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\Projects\Text-Summarization\src\utils\functions.py", line 45, in create_directories
+    for path in path_to_directories:
+TypeError: 'WindowsPath' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: 'WindowsPath' object is not iterable
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 868, in __call__
+    if not isinstance(value, templ):
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 1236, in __instancecheck__
+    return self.__subclasscheck__(type(obj))
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 1240, in __subclasscheck__
+    if issubclass(cls, arg):
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 979, in __subclasscheck__
+    raise TypeError("Subscripted generics cannot be used with"
+TypeError: Subscripted generics cannot be used with class and instance checks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 868, in __call__
+    if not isinstance(value, templ):
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 976, in __instancecheck__
+    return self.__subclasscheck__(type(obj))
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 979, in __subclasscheck__
+    raise TypeError("Subscripted generics cannot be used with"
+TypeError: Subscripted generics cannot be used with class and instance checks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: typing.Any cannot be used with isinstance()
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 868, in __call__
+    if not isinstance(value, templ):
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 393, in __instancecheck__
+    raise TypeError(f"{self} cannot be used with isinstance()")
+TypeError: typing.Any cannot be used with isinstance()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: typing.Any cannot be used with isinstance()
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 868, in __call__
+    if not isinstance(value, templ):
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 976, in __instancecheck__
+    return self.__subclasscheck__(type(obj))
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 979, in __subclasscheck__
+    raise TypeError("Subscripted generics cannot be used with"
+TypeError: Subscripted generics cannot be used with class and instance checks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+INFO Created directory: artifacts\data_ingestion
+ERROR Stage 'Data Ingestion' failed: Error getting data ingestion configuration: "'ConfigBox' object has no attribute 'source_url'"
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 43, in get_data_ingestion_config
+    source_url=config.source_url,
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 24, in run
+    ingestion_config = config_manager.get_data_ingestion_config()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 47, in get_data_ingestion_config
+    raise RuntimeError(f"Error getting data ingestion configuration: {e}")
+RuntimeError: Error getting data ingestion configuration: "'ConfigBox' object has no attribute 'source_url'"
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+INFO Directory already exists: artifacts\data_ingestion
+INFO Downloaded file: artifacts/data_ingestion/data.zip
+INFO Extracted to: artifacts/data_ingestion
+INFO Stage 'Data Ingestion' completed successfully.
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 868, in __call__
+    if not isinstance(value, templ):
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 976, in __instancecheck__
+    return self.__subclasscheck__(type(obj))
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 979, in __subclasscheck__
+    raise TypeError("Subscripted generics cannot be used with"
+TypeError: Subscripted generics cannot be used with class and instance checks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 868, in __call__
+    if not isinstance(value, templ):
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 976, in __instancecheck__
+    return self.__subclasscheck__(type(obj))
+  File "C:\Users\milos\AppData\Local\Programs\Python\Python310\lib\typing.py", line 979, in __subclasscheck__
+    raise TypeError("Subscripted generics cannot be used with"
+TypeError: Subscripted generics cannot be used with class and instance checks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: Subscripted generics cannot be used with class and instance checks
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+ERROR Stage 'Data Ingestion' failed: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 24, in __init__
+    create_directories([artifacts_root])
+  File "D:\Projects\Text-Summarization\env\lib\site-packages\ensure\main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Text-Summarization\main.py", line 19, in run_data_ingestion
+    ingestion_pipeline.run()
+  File "D:\Projects\Text-Summarization\src\stages\data_ingestion_stage.py", line 22, in run
+    config_manager = ConfigurationManager()
+  File "D:\Projects\Text-Summarization\src\config\settings.py", line 27, in __init__
+    raise RuntimeError(f"Error loading configuration files or creating directories: {e}")
+RuntimeError: Error loading configuration files or creating directories: isinstance() arg 2 must be a type, a tuple of types, or a union
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+INFO Directory already exists: artifacts\data_ingestion
+INFO File already exists: artifacts/data_ingestion/data.zip
+INFO Extracted to: artifacts/data_ingestion
+INFO Stage 'Data Ingestion' completed successfully.
+INFO Logger is set up successfully.
+INFO Stage 'Data Ingestion' started.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+INFO Directory already exists: artifacts\data_ingestion
+INFO File already exists: artifacts/data_ingestion/data.zip
+INFO Extracted to: artifacts/data_ingestion
+INFO Stage 'Data Ingestion' completed successfully.

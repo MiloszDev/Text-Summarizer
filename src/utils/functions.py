@@ -1,11 +1,12 @@
 import os
 import yaml
 
-from box import ConfigBox
-from box.exceptions import BoxValueError # type: ignore
 from pathlib import Path
+from box import ConfigBox
+from typing import List, Union
 from logger.handlers import logger
 from ensure import ensure_annotations
+from box.exceptions import BoxValueError # type: ignore
 
 @ensure_annotations
 def read_yaml(path_to_yaml_file: Path) -> ConfigBox:
@@ -32,8 +33,7 @@ def read_yaml(path_to_yaml_file: Path) -> ConfigBox:
         logger.error(f"Unexpected error while reading YAML file: {path_to_yaml_file} - {str(e)}")
         raise e
 
-@ensure_annotations
-def create_directories(path_to_directories: list, verbose=True):
+def create_directories(path_to_directories: List[Union[str, Path]], verbose: bool = True) -> None:
     """
     Create a list of directories.
 
@@ -42,6 +42,8 @@ def create_directories(path_to_directories: list, verbose=True):
         verbose: Whether to print logs or not.
     """
     for path in path_to_directories:
+        path = Path(path)
+        
         try:
             if not path.exists():
                 path.mkdir(parents=True, exist_ok=True)
