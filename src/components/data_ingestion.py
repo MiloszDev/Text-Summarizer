@@ -4,8 +4,10 @@ import os
 import zipfile
 import urllib.request as request
 
+from typing import Union, Tuple
 from src.logger.handlers import logger
 from src.entities.models import DataIngestionConfig
+from datasets import load_dataset, concatenate_datasets # type: ignore
 
 class DataIngestion:
     """
@@ -18,33 +20,30 @@ class DataIngestion:
         """
         self.config = config
 
-    def download_data(self) -> None:
-        """
-        Downloads the file if it doesn't already exist.
-        """
-        if not os.path.exists(self.config.data_file):
+    def rename_columns(self, dataset):
+        if "dialogue_act" in dataset.column_names:
+            dataset = dataset.rename_column("dialogue_act", "summary")
+        return dataset
+
+    def load_datasets(self):
+        datasets = []
+        for dataset in list(self.config.datasets):
             try:
-                request.urlretrieve(self.config.source_url, self.config.data_file)
-                logger.info(f"Downloaded file: {self.config.data_file}")
-            
+                datasets.append(load_dataset(dataset, trust_remote_code=True))
+                logger.info(f"Loaded dataset: {dataset}")     
+                datasets[-1] = self.rename_columns(datasets[-1])
             except Exception as e:
-                logger.error(f"Download failed: {e}")
-                raise
+                logger.error(f"Failed to load dataset {dataset}: {e}")
+                continue
+            
+        if datasets:
+            train_data = concatenate_datasets([dataset['train'] for dataset in datasets])
+            test_data = concatenate_datasets([dataset['test'] for dataset in datasets])
 
+            logger.info(f"Combined dataset: {train_data.num_rows} training samples, {test_data.num_rows} test samples.")
+            return train_data, test_data
         else:
-            logger.info(f"File already exists: {self.config.data_file}")
+            logger.error("No datasets were loaded successfully.")
+            return None
 
-    def extract_file(self):
-        """
-        Extracts the zip file to the specified directory.
-        """
-        os.makedirs(self.config.unzip_dir, exist_ok=True)
 
-        try:
-            with zipfile.ZipFile(self.config.data_file, 'r') as zip_ref:
-                zip_ref.extractall(self.config.unzip_dir)
-                logger.info(f"Extracted to: {self.config.unzip_dir}")
-
-        except (zipfile.BadZipFile, Exception) as e:
-            logger.error(f"Extraction failed: {e}")
-            raise
