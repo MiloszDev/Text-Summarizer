@@ -4,8 +4,8 @@ import os
 import zipfile
 import urllib.request as request
 
-from logger.handlers import logger
-from entities.models import DataIngestionConfig
+from src.logger.handlers import logger
+from src.entities.models import DataIngestionConfig
 
 class DataIngestion:
     """

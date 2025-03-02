@@ -1,14 +1,15 @@
 import os
 import sys
+import logging
+import pandas as pd
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
+from src.logger.handlers import logger
+from src.stages.data_ingestion_stage import DataIngestionPipeline
+from src.stages.data_preprocessing_stage import DataPreprocessingPipeline
+from src.stages.training_stage import ModelTrainingPipeline
+from src.stages.evaluation_stage import ModelEvaluationPipeline
 
-from logger.handlers import logger  # type: ignore
-from stages.data_ingestion_stage import DataIngestionPipeline  # type: ignore
-
-STAGE_NAME = "Data Ingestion"
-
-def run_data_ingestion():
+def run_data_ingestion(STAGE_NAME="Data Ingestion"):
     """
     Executes the data ingestion pipeline, logging the start and completion status.
     """
@@ -16,13 +17,76 @@ def run_data_ingestion():
         logger.info(f"Stage '{STAGE_NAME}' started.")
         
         ingestion_pipeline = DataIngestionPipeline()
-        ingestion_pipeline.run()
+        train_data, test_data = ingestion_pipeline.run()
         
         logger.info(f"Stage '{STAGE_NAME}' completed successfully.")
         
+        return train_data, test_data
+
+    except Exception as e:
+        logger.exception(f"Stage '{STAGE_NAME}' failed: {e}")
+        raise e
+
+def run_data_preprocessing(train_data, test_data, STAGE_NAME="Data Preprocessing"):
+    """
+    Executes the data preprocessing pipeline, logging the start and completion status.
+    """
+    try:
+        logger.info(f"Stage '{STAGE_NAME}' started.")
+        
+        preprocessing_pipeline = DataPreprocessingPipeline()
+        tokenized_train, tokenized_test = preprocessing_pipeline.run(train_data, test_data)
+        
+        logger.info(f"Stage '{STAGE_NAME}' completed successfully.")
+        
+        return tokenized_train, tokenized_test
+    
+    except Exception as e:
+        logger.exception(f"Stage '{STAGE_NAME}' failed: {e}")
+        raise e
+
+def run_model_training(tokenized_train, tokenized_test, STAGE_NAME="Model Training"):
+    """
+    Executes the model training pipeline, logging the start and completion status.
+    """
+    try:
+        logger.info(f"Stage '{STAGE_NAME}' started.")
+                
+        training_pipeline = ModelTrainingPipeline()
+        model, tokenizer = training_pipeline.run(tokenized_train, tokenized_test)
+                
+        logger.info(f"Stage '{STAGE_NAME}' completed successfully.")
+                
+        return model, tokenizer
+            
+    except Exception as e:
+        logger.exception(f"Stage '{STAGE_NAME}' failed: {e}")
+        raise e
+
+def run_model_evaluation(eval_dataset, STAGE_NAME="Model Evaluation"):
+    """
+    Executes the model evaluation pipeline, logging the start and completion status.
+    """
+    try:
+        logger.info(f"Stage '{STAGE_NAME}' started.")
+                
+        evaluation_pipeline = ModelEvaluationPipeline()
+        results = evaluation_pipeline.run(eval_dataset)
+        
+        logger.info(f"Stage '{STAGE_NAME}' completed successfully.")
+        
+        return results
+    
     except Exception as e:
         logger.exception(f"Stage '{STAGE_NAME}' failed: {e}")
         raise e
 
 if __name__ == "__main__":
-    run_data_ingestion()
+    train_data, test_data = run_data_ingestion()
+    
+    tokenized_train, tokenized_test = run_data_preprocessing(train_data, test_data)
+    
+    model, tokenizer = run_model_training(tokenized_train, tokenized_test)
+    
+    results = run_model_evaluation(pd.DataFrame(list(tokenized_test)[:5]))
+    logger.info(f"Evaluation Results: {results}")

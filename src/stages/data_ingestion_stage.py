@@ -1,8 +1,8 @@
 """Orchestrates the data ingestion process, including downloading and extracting data."""
 
-from logger.handlers import logger
-from config.settings import ConfigurationManager
-from components.data_ingestion import DataIngestion
+from src.logger.handlers import logger
+from src.config.settings import ConfigurationManager
+from src.components.data_ingestion import DataIngestion
 
 class DataIngestionPipeline:
     """

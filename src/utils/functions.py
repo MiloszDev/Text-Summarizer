@@ -4,8 +4,8 @@ import yaml
 from pathlib import Path
 from box import ConfigBox
 from typing import List, Union
-from logger.handlers import logger
 from ensure import ensure_annotations
+from src.logger.handlers import logger
 from box.exceptions import BoxValueError # type: ignore
 
 @ensure_annotations

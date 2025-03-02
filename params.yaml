@@ -1,10 +1,12 @@
 TrainingArguments:
-  num_train_epochs: 1
-  warmup_steps: 500
-  per_device_train_batch_size: 1
+  eval_strategy: epoch
+  learning_rate: 3e-5
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  num_train_epochs: 5
   weight_decay: 0.01
-  logging_steps: 10
-  evaluation_strategy: steps
-  eval_steps: 500
-  save_steps: 1e6
-  gradient_accumulation_steps: 16
+  logging_dir: ./logs
+  logging_steps: 50
+  save_strategy: epoch
+  report_to: none
+  output_dir: ./model_output

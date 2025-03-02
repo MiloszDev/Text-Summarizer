@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from starlette.responses import Response
 from starlette.responses import RedirectResponse
-from src.stages.prediction import PredictionPipeline
+from src.stages.Prediction import PredictionPipeline
 
 app = FastAPI()
 
