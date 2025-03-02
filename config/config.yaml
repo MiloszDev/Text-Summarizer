@@ -1,7 +1,17 @@
 artifacts_root: artifacts
 
 data_ingestion:
-  root_dir: artifacts/data_ingestion
-  unzip_dir: artifacts/data_ingestion
-  data_file: artifacts/data_ingestion/data.zip
-  source_url: https://github.com/entbappy/Branching-tutorial/raw/master/summarizer-data.zip
+  datasets: [samsum, knkarthick/dialogsum, multi_woz_v22]
+
+data_preprocessing:
+  model_name: t5-small
+  inputs_max_length: 512
+  labels_max_length: 128
+
+model_training:
+  model_name: t5-small
+
+model_evaluation:
+  model_path: artifacts/model
+  tokenizer_path: artifacts/model
+  evaluation_metric: rouge
