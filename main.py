@@ -6,8 +6,8 @@ import pandas as pd
 from src.logger.handlers import logger
 from src.stages.data_ingestion_stage import DataIngestionPipeline
 from src.stages.data_preprocessing_stage import DataPreprocessingPipeline
-from src.stages.training_stage import ModelTrainingPipeline
-from src.stages.evaluation_stage import ModelEvaluationPipeline
+from src.stages.model_training_stage import ModelTrainingPipeline
+from src.stages.model_evaluation_stage import ModelEvaluationPipeline
 
 def run_data_ingestion(STAGE_NAME="Data Ingestion"):
     """
