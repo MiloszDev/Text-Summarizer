@@ -29,7 +29,7 @@ jobs:
         run: pip install flake8 && flake8 .
 
       - name: Run unit tests
-        run: python -B tests/unit
+        run: python -B -m pytest tests/unit
 
       - name: Run integration tests
-        run: python -B tests/integration
+        run: python -B -m pytest tests/integration

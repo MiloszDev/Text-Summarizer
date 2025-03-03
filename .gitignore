@@ -1,3 +1,4 @@
-__pycache__
 env
+__pycache__
+.pytest_cache
 Text_Summarization.egg-info

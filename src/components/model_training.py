@@ -8,12 +8,12 @@ from src.entities.models import ModelTrainingConfig
 
 class ModelTraining:
     """
-    Manages downloading and extracting data.
+    Manages the model training process.
     """
     
     def __init__(self, config: ModelTrainingConfig) -> None:
         """
-        Initializes with configuration for data ingestion.
+        Initializes with configuration for model training.
         """
         self.config = config
 
@@ -24,7 +24,8 @@ class ModelTraining:
         model = T5ForConditionalGeneration.from_pretrained(self.config.model_name).to(device)
 
         training_args = TrainingArguments(
-            eval_strategy=self.config.eval_strategy,  
+            output_dir=self.config.output_dir,  # Ensure output_dir is included
+            eval_strategy=self.config.eval_strategy,
             learning_rate=self.config.learning_rate,
             per_device_train_batch_size=self.config.per_device_train_batch_size,
             per_device_eval_batch_size=self.config.per_device_eval_batch_size,

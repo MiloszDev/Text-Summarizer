@@ -2,14 +2,14 @@ import os
 import yaml
 
 from pathlib import Path
-from box import ConfigBox
+from box import Box
 from typing import List, Union
 from ensure import ensure_annotations
 from src.logger.handlers import logger
-from box.exceptions import BoxValueError # type: ignore
+from box.exceptions import BoxValueError
 
 @ensure_annotations
-def read_yaml(path_to_yaml_file: Path) -> ConfigBox:
+def read_yaml(path_to_yaml_file: Path) -> Box:
     """
     Reads a yaml file and returns a ConfigBox object.
 
@@ -23,7 +23,7 @@ def read_yaml(path_to_yaml_file: Path) -> ConfigBox:
         with open(path_to_yaml_file, "r") as file:
             content = yaml.safe_load(file)
             logger.info(f"Successfully read YAML file: {path_to_yaml_file}")
-            return ConfigBox(content)
+            return Box(content)
 
     except BoxValueError as e:
         logger.error(f"Box error while reading YAML file: {path_to_yaml_file}")
