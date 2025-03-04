@@ -1,57 +1,80 @@
-import os
-import sys
-import zipfile
-
-sys.path.insert(0, r'D:\Projects\Text-Summarization\src')
-
-import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 from src.entities.models import DataIngestionConfig
 from src.components.data_ingestion import DataIngestion
 
+from datasets import Dataset, DatasetDict
+from unittest.mock import patch
+from src.entities.models import DataIngestionConfig
+from src.components.data_ingestion import DataIngestion
+from datasets import Dataset, DatasetDict
 
-@pytest.fixture
-def config():
-    return DataIngestionConfig(
-        source_url="http://example.com/data.zip",
-        data_file="data.zip",
-        unzip_dir="unzip_dir"
-    )
+@patch("src.components.data_ingestion.load_dataset")
+def test_load_datasets(mock_load_dataset):
+    mock_train = Dataset.from_dict({"text": ["sample1", "sample2"]})
+    mock_test = Dataset.from_dict({"text": ["sample3", "sample4"]})
+    mock_dataset = DatasetDict({"train": mock_train, "test": mock_test})
 
-@patch("urllib.request.urlretrieve")
-def test_download_data(mock_urlretrieve, config):
-    mock_urlretrieve.return_value = None
-    ingestion = DataIngestion(config)
+    mock_load_dataset.return_value = mock_dataset
+
+    config = DataIngestionConfig(datasets=["mock_dataset"])
+    data_ingestion = DataIngestion(config)
+    train_data, test_data = data_ingestion.load_datasets()
+
+    assert train_data is not None
+    assert test_data is not None
+    assert train_data.num_rows == 2
+    assert test_data.num_rows == 2
+
+@patch("src.components.data_ingestion.concatenate_datasets")
+@patch("src.components.data_ingestion.load_dataset")
+def test_concatenate_datasets(mock_load_dataset, mock_concatenate):
+    mock_train = Dataset.from_dict({"text": ["sample1", "sample2"]})
+    mock_test = Dataset.from_dict({"text": ["sample3", "sample4"]})
+    mock_dataset = DatasetDict({"train": mock_train, "test": mock_test})
+
+    mock_load_dataset.return_value = mock_dataset
+
+    mock_concatenate.side_effect = lambda x: x[0]
+
+    config = DataIngestionConfig(datasets=["mock_dataset"])
+    data_ingestion = DataIngestion(config)
     
-    ingestion.download_data()
+    train_data, test_data = data_ingestion.load_datasets()
 
-    mock_urlretrieve.assert_called_once_with(config.source_url, config.data_file)
+    mock_concatenate.assert_called()
+    assert train_data.num_rows == 2
+    assert test_data.num_rows == 2
 
-@patch("urllib.request.urlretrieve")
-def test_download_data_already_exists(mock_urlretrieve, config):
-    os.makedirs(config.unzip_dir, exist_ok=True)
-    with open(config.data_file, "w") as f:
-        f.write("dummy content")
-    
-    ingestion = DataIngestion(config)
-    ingestion.download_data()
+@patch("src.components.data_ingestion.logger")
+@patch("src.components.data_ingestion.load_dataset")
+def test_logging_behavior(mock_load_dataset, mock_logger):
+    mock_train = Dataset.from_dict({"text": ["sample1", "sample2"]})
+    mock_test = Dataset.from_dict({"text": ["sample3", "sample4"]})
+    mock_dataset = DatasetDict({"train": mock_train, "test": mock_test})
 
-    mock_urlretrieve.assert_not_called()
+    mock_load_dataset.return_value = mock_dataset
 
-@patch("zipfile.ZipFile")
-def test_extract_file(mock_zipfile, config):
-    mock_zipfile.return_value.__enter__.return_value.extractall = MagicMock()
+    config = DataIngestionConfig(datasets=["mock_dataset"])
+    data_ingestion = DataIngestion(config)
 
-    ingestion = DataIngestion(config)
-    ingestion.extract_file()
+    train_data, test_data = data_ingestion.load_datasets()
 
-    mock_zipfile.return_value.__enter__.return_value.extractall.assert_called_once_with(config.unzip_dir)
+    mock_logger.info.assert_any_call("Loaded dataset: mock_dataset")
+    mock_logger.info.assert_any_call("Combined dataset: 2 training samples, 2 test samples.")
 
-@patch("zipfile.ZipFile")
-def test_extract_file_bad_zip(mock_zipfile, config):
-    mock_zipfile.side_effect = zipfile.BadZipFile("Bad zip file")
+    assert train_data.num_rows == 2
+    assert test_data.num_rows == 2
 
-    ingestion = DataIngestion(config)
+@patch("src.components.data_ingestion.load_dataset")
+def test_load_dataset_called_with_correct_arguments(mock_load_dataset):
+    mock_train = Dataset.from_dict({"text": ["sample1", "sample2"]})
+    mock_test = Dataset.from_dict({"text": ["sample3", "sample4"]})
+    mock_dataset = DatasetDict({"train": mock_train, "test": mock_test})
 
-    with pytest.raises(zipfile.BadZipFile):
-        ingestion.extract_file()
+    mock_load_dataset.return_value = mock_dataset
+
+    config = DataIngestionConfig(datasets=["mock_dataset"])
+    data_ingestion = DataIngestion(config)
+    train_data, test_data = data_ingestion.load_datasets()
+
+    mock_load_dataset.assert_called_with("mock_dataset", trust_remote_code=True)
