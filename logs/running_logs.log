@@ -442,3 +442,435 @@ INFO Loaded dataset: mock_dataset
 INFO Combined dataset: 2 training samples, 2 test samples.
 INFO Loaded dataset: mock_dataset
 INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+ERROR Failed to load dataset mock_dataset: Dataset 'mock_dataset' doesn't exist on the Hub or cannot be accessed.
+ERROR No datasets were loaded successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+ERROR Failed to load dataset mock_dataset: Dataset 'mock_dataset' doesn't exist on the Hub or cannot be accessed.
+ERROR No datasets were loaded successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Loaded dataset: mock_dataset
+INFO Combined dataset: 2 training samples, 2 test samples.
