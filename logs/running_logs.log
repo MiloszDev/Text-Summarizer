@@ -874,3 +874,16 @@ INFO Loaded dataset: mock_dataset
 INFO Combined dataset: 2 training samples, 2 test samples.
 INFO Loaded dataset: mock_dataset
 INFO Combined dataset: 2 training samples, 2 test samples.
+INFO Logger is set up successfully.
+INFO Logger is set up successfully.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+INFO Logger is set up successfully.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts
+INFO Logger is set up successfully.
+INFO Successfully read YAML file: config\config.yaml
+INFO Successfully read YAML file: params.yaml
+INFO Directory already exists: artifacts

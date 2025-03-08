@@ -1,12 +1,7 @@
 from unittest.mock import patch
-from src.entities.models import DataIngestionConfig
-from src.components.data_ingestion import DataIngestion
-
 from datasets import Dataset, DatasetDict
-from unittest.mock import patch
-from src.entities.models import DataIngestionConfig
 from src.components.data_ingestion import DataIngestion
-from datasets import Dataset, DatasetDict
+from src.entities.models import DataIngestionConfig
 
 @patch("src.components.data_ingestion.load_dataset")
 def test_load_datasets(mock_load_dataset):
