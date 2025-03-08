@@ -31,11 +31,15 @@ def read_yaml(path_to_yaml_file: Path) -> Box:
         raise e
 
     except Exception as e:
-        logger.error(f"Unexpected error while reading YAML file: {path_to_yaml_file} - {str(e)}")
+        logger.error(
+            f"Unexpected error while reading YAML file: {path_to_yaml_file} - {str(e)}"
+        )
         raise e
 
 
-def create_directories(path_to_directories: List[Union[str, Path]], verbose: bool = True) -> None:
+def create_directories(
+    path_to_directories: List[Union[str, Path]], verbose: bool = True
+) -> None:
     """
     Create a list of directories.
 
@@ -45,7 +49,7 @@ def create_directories(path_to_directories: List[Union[str, Path]], verbose: boo
     """
     for path in path_to_directories:
         path = Path(path)
-        
+
         try:
             if not path.exists():
                 path.mkdir(parents=True, exist_ok=True)
@@ -66,10 +70,10 @@ def get_file_size(path: Path) -> str:
 
     Args:
         path: Path to the file.
-    
+
     Returns:
         str: Size of the file in KB.
     """
     size_in_kb = round(os.path.getsize(path) / 1024)
-    
+
     return f"~ {size_in_kb} KB"

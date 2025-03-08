@@ -52,9 +52,6 @@ class ModelEvaluation:
         input_ids = samples["input_ids"]
         labels = samples["labels"]
 
-        print(input_ids, type(input_ids))
-        print(labels, type(labels))
-
         predictions = [
             self.summarize_text(
                 self.tokenizer.decode(input_id, skip_special_tokens=True)

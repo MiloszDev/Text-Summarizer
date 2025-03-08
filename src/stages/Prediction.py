@@ -17,7 +17,9 @@ class PredictionPipeline:
             'early_stopping': True
         }
 
-        pipe = pipeline('summarization', model=self.config.model_path, tokenizer=tokenizer)
+        pipe = pipeline(
+            'summarization', model=self.config.model_path, tokenizer=tokenizer
+        )
 
         print(f'Dialogue:\n{text}')
 
