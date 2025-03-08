@@ -1,3 +1,22 @@
+name: worflow
+
+on:
+  push:
+    branches:
+      - main
+
+    paths-ignore:
+      - "README.md"
+      - "setup.py"
+      - "template.py"
+      - ".gitignore"
+      - ".gitattributes"
+      - "LICENSE"
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   integration:
     name: Continuous Integration
