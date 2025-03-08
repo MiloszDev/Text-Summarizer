@@ -68,7 +68,6 @@ pydantic
 pydantic_core
 Pygments
 pyppmd
-pytest
 python-box
 python-dateutil
 PyYAML
