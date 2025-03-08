@@ -9,7 +9,7 @@ from src.stages.model_evaluation_stage import ModelEvaluationPipeline
 
 def run_data_ingestion(STAGE_NAME="Data Ingestion"):
     """
-    Executes the data ingestion pipeline, logging the start and 
+    Executes the data ingestion pipeline, logging the start and
     completion status.
     """
     try:
@@ -27,10 +27,10 @@ def run_data_ingestion(STAGE_NAME="Data Ingestion"):
         raise e
 
 
-def run_data_preprocessing(train_data, test_data, 
+def run_data_preprocessing(train_data, test_data,
                            STAGE_NAME="Data Preprocessing"):
     """
-    Executes the data preprocessing pipeline, logging the start 
+    Executes the data preprocessing pipeline, logging the start
     and completion status.
     """
     try:
@@ -50,10 +50,10 @@ def run_data_preprocessing(train_data, test_data,
         raise e
 
 
-def run_model_training(tokenized_train, tokenized_test, 
+def run_model_training(tokenized_train, tokenized_test,
                        STAGE_NAME="Model Training"):
     """
-    Executes the model training pipeline, logging the start 
+    Executes the model training pipeline, logging the start
     and completion status.
     """
     try:
@@ -75,7 +75,7 @@ def run_model_training(tokenized_train, tokenized_test,
 
 def run_model_evaluation(eval_dataset, STAGE_NAME="Model Evaluation"):
     """
-    Executes the model evaluation pipeline, logging the start 
+    Executes the model evaluation pipeline, logging the start
     and completion status.
     """
     try:

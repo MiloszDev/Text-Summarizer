@@ -1,5 +1,4 @@
 import torch
-
 from evaluate import load
 from src.logger.handlers import logger
 from src.entities.models import ModelEvaluationConfig
@@ -45,7 +44,9 @@ class ModelEvaluation:
         return summary
 
     def calculate_metric(self, predictions, references):
-        return self.metric.compute(predictions=predictions, references=references)
+        return self.metric.compute(
+            predictions=predictions, references=references
+        )
 
     def evaluate_model(self, samples):
         input_ids = samples["input_ids"]
@@ -62,7 +63,8 @@ class ModelEvaluation:
         ]
 
         labels = [
-            self.tokenizer.decode(label, skip_special_tokens=True) for label in labels
+            self.tokenizer.decode(label, skip_special_tokens=True)
+            for label in labels
         ]
 
         results = self.calculate_metric(predictions, labels)

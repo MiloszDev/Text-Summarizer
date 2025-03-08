@@ -19,9 +19,9 @@ class ModelTraining:
         device = "cuda" if torch.cuda.is_available() else "cpu"
 
         tokenizer = T5Tokenizer.from_pretrained(self.config.model_name)
-        model = T5ForConditionalGeneration.from_pretrained(self.config.model_name).to(
-            device
-        )
+        model = T5ForConditionalGeneration.from_pretrained(
+            self.config.model_name
+        ).to(device)
 
         training_args = TrainingArguments(
             output_dir=self.config.output_dir,
