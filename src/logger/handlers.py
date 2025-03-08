@@ -10,7 +10,10 @@ log_filepath = os.path.join(log_dir, "running_logs.log")
 
 log_format = "%(log_color)s[%(levelname)s]%(reset)s - %(message)s"
 
+
 def setup_logger():
+    """Sets up and returns a colorized logger."""
+    
     log_dir = "logs"
     os.makedirs(log_dir, exist_ok=True)
 
@@ -27,7 +30,9 @@ def setup_logger():
     }
 
     console_handler = colorlog.StreamHandler(sys.stdout)
-    console_formatter = colorlog.ColoredFormatter(log_format, log_colors=log_colors)
+    console_formatter = colorlog.ColoredFormatter(
+        log_format, log_colors=log_colors
+    )
     console_handler.setFormatter(console_formatter)
 
     logger = logging.getLogger("TextSummarization-Logger")
@@ -41,6 +46,8 @@ def setup_logger():
     logger.addHandler(file_handler)
 
     logger.info("Logger is set up successfully.")
+
     return logger
+
 
 logger = setup_logger()

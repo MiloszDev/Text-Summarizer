@@ -3,12 +3,14 @@
 from pathlib import Path
 from dataclasses import dataclass
 
+
 @dataclass(frozen=True)
 class DataIngestionConfig:
     """
     Configuration for data ingestion.
     """
     datasets: list
+
 
 @dataclass(frozen=True)
 class DataPreprocessingConfig:
@@ -18,6 +20,7 @@ class DataPreprocessingConfig:
     model_name: str
     inputs_max_length: int
     labels_max_length: int
+
 
 @dataclass(frozen=True)
 class ModelTrainingConfig:
@@ -37,8 +40,12 @@ class ModelTrainingConfig:
     report_to: str
     output_dir: Path
 
+
 @dataclass(frozen=True)
 class ModelEvaluationConfig:
+    """
+    Configuration for model evaluation.
+    """
     model_path: str
     tokenizer_path: str
     evaluation_metric: str

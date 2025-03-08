@@ -1,11 +1,10 @@
 """Orchestrates the data ingestion process, including downloading and extracting data."""
 
 import pandas as pd
-
 from typing import Tuple
-from src.logger.handlers import logger
 from src.config.settings import ConfigurationManager
 from src.components.data_preprocessing import DataPreprocessing
+
 
 class DataPreprocessingPipeline:
     """

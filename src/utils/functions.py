@@ -8,6 +8,7 @@ from ensure import ensure_annotations
 from src.logger.handlers import logger
 from box.exceptions import BoxValueError
 
+
 @ensure_annotations
 def read_yaml(path_to_yaml_file: Path) -> Box:
     """
@@ -32,6 +33,7 @@ def read_yaml(path_to_yaml_file: Path) -> Box:
     except Exception as e:
         logger.error(f"Unexpected error while reading YAML file: {path_to_yaml_file} - {str(e)}")
         raise e
+
 
 def create_directories(path_to_directories: List[Union[str, Path]], verbose: bool = True) -> None:
     """

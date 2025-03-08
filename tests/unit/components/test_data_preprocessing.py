@@ -4,6 +4,7 @@ from datasets import Dataset
 from src.entities.models import DataPreprocessingConfig
 from src.components.data_preprocessing import DataPreprocessing
 
+
 @pytest.fixture
 def mock_config():
     return DataPreprocessingConfig(
@@ -11,6 +12,7 @@ def mock_config():
         inputs_max_length=512,
         labels_max_length=128
     )
+
 
 @pytest.fixture
 def mock_data():
@@ -21,6 +23,7 @@ def mock_data():
     train_data = Dataset.from_dict(data)
     test_data = Dataset.from_dict(data)
     return train_data, test_data
+
 
 @patch("transformers.T5Tokenizer.from_pretrained")
 def test_preprocess_function(mock_tokenizer, mock_config, mock_data):
@@ -44,11 +47,11 @@ def test_preprocess_function(mock_tokenizer, mock_config, mock_data):
     assert result['input_ids'] == [[101, 102], [103, 104]]
     assert result['attention_mask'] == [[1, 1], [1, 1]]
 
+
 @patch("transformers.T5Tokenizer.from_pretrained")
 def test_preprocess_function_empty_input(mock_tokenizer, mock_config):
     data = {'dialogue': [], 'summary': []}
     train_data = Dataset.from_dict(data)
-    test_data = Dataset.from_dict(data)
     
     preprocessing = DataPreprocessing(mock_config)
     mock_tokenizer_instance = MagicMock()
@@ -62,6 +65,7 @@ def test_preprocess_function_empty_input(mock_tokenizer, mock_config):
 
     assert result['input_ids'] == []
     assert result['attention_mask'] == []
+
 
 @patch("transformers.T5Tokenizer.from_pretrained")
 def test_preprocess_function_with_different_config(mock_tokenizer, mock_data):
@@ -92,7 +96,6 @@ def test_preprocess_function_tokenization_failure(mock_tokenizer, mock_data):
 
     data = {'dialogue': ["Hello", "How are you?"], 'summary': ["Greeting", "Question"]}
     train_data = Dataset.from_dict(data)
-    test_data = Dataset.from_dict(data)
 
     mock_config = DataPreprocessingConfig(
         model_name='t5-small',

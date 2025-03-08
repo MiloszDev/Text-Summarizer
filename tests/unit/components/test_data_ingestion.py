@@ -3,6 +3,7 @@ from datasets import Dataset, DatasetDict
 from src.components.data_ingestion import DataIngestion
 from src.entities.models import DataIngestionConfig
 
+
 @patch("src.components.data_ingestion.load_dataset")
 def test_load_datasets(mock_load_dataset):
     mock_train = Dataset.from_dict({"text": ["sample1", "sample2"]})
@@ -19,6 +20,7 @@ def test_load_datasets(mock_load_dataset):
     assert test_data is not None
     assert train_data.num_rows == 2
     assert test_data.num_rows == 2
+
 
 @patch("src.components.data_ingestion.concatenate_datasets")
 @patch("src.components.data_ingestion.load_dataset")
@@ -40,6 +42,7 @@ def test_concatenate_datasets(mock_load_dataset, mock_concatenate):
     assert train_data.num_rows == 2
     assert test_data.num_rows == 2
 
+
 @patch("src.components.data_ingestion.logger")
 @patch("src.components.data_ingestion.load_dataset")
 def test_logging_behavior(mock_load_dataset, mock_logger):
@@ -55,10 +58,13 @@ def test_logging_behavior(mock_load_dataset, mock_logger):
     train_data, test_data = data_ingestion.load_datasets()
 
     mock_logger.info.assert_any_call("Loaded dataset: mock_dataset")
-    mock_logger.info.assert_any_call("Combined dataset: 2 training samples, 2 test samples.")
+    mock_logger.info.assert_any_call(
+        "Combined dataset: 2 training samples, 2 test samples."
+    )
 
     assert train_data.num_rows == 2
     assert test_data.num_rows == 2
+
 
 @patch("src.components.data_ingestion.load_dataset")
 def test_load_dataset_called_with_correct_arguments(mock_load_dataset):
